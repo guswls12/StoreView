@@ -9,9 +9,11 @@ import UIKit
 
 class SellItemCell: UICollectionViewCell{
     
+    @IBOutlet weak var SellItemButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     var imageName = ""
     
+    var sellItemPressed : (()->()) = {}
     
     
     func fetchData(_ data: BaseItems){
@@ -21,4 +23,7 @@ class SellItemCell: UICollectionViewCell{
         }
     }
     
+    @IBAction func pressSellButton(_ sender: UIButton) {
+        sellItemPressed()
+    }
 }

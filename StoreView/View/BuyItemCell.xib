@@ -23,17 +23,31 @@
                             <constraint firstAttribute="height" constant="150" id="I8b-FH-XNk"/>
                         </constraints>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bm7-q7-Da3">
+                        <rect key="frame" x="156" y="52" width="54" height="34"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="cart.fill.badge.plus" catalog="system"/>
+                        <connections>
+                            <action selector="pressBuyButton:" destination="Z76-3W-Ees" eventType="touchUpInside" id="CwJ-b8-Cyg"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="bm7-q7-Da3" firstAttribute="trailing" secondItem="HYw-qE-2sR" secondAttribute="trailing" id="9m8-dG-yIg"/>
                     <constraint firstItem="HYw-qE-2sR" firstAttribute="centerX" secondItem="EhB-sc-Scg" secondAttribute="centerX" id="S8M-j1-GEX"/>
+                    <constraint firstItem="bm7-q7-Da3" firstAttribute="top" secondItem="HYw-qE-2sR" secondAttribute="top" id="SZq-d8-2lh"/>
                     <constraint firstItem="HYw-qE-2sR" firstAttribute="centerY" secondItem="EhB-sc-Scg" secondAttribute="centerY" id="tJ3-Um-zUe"/>
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="270" height="254"/>
             <connections>
+                <outlet property="buyItemButton" destination="bm7-q7-Da3" id="ECS-8n-adJ"/>
                 <outlet property="imageView" destination="HYw-qE-2sR" id="Hhr-0c-6fJ"/>
             </connections>
             <point key="canvasLocation" x="369.23076923076923" y="7.1090047393364921"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="cart.fill.badge.plus" catalog="system" width="128" height="105"/>
+    </resources>
 </document>

@@ -9,6 +9,13 @@ import UIKit
 
 class BuyItemCell: UICollectionViewCell{
     
+
+    
+    @IBOutlet weak var buyItemButton: UIButton!
+    
+    var buyItemPressed: (()->()) = {}
+    
+    
     var imageName = ""
     @IBOutlet weak var imageView: UIImageView!
     
@@ -18,4 +25,11 @@ class BuyItemCell: UICollectionViewCell{
             self.imageView.image = UIImage(named: imageName)
         }
     }
+    
+    @IBAction func pressBuyButton(_ sender: UIButton) {
+        buyItemPressed()
+    }
+    
+    
+    
 }
